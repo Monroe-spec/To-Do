@@ -1,0 +1,63 @@
+/*#input {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+span {
+    color: grey;
+    font-size: 50px;
+
+}
+
+ul {
+    
+    column-count: 3;
+    column-gap: 20px;
+    border: 5px dotted black;
+    border-radius: 10%
+} */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+    gap: 20px;
+    padding: 20px;
+}
+
+.input {
+    grid-column: 1 / -1; /* Makes the input section span both columns */
+}
+
+/* Style for all list containers */
+.tasks, .goals, .completed-tasks, .completed-goals {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Style for the headings */
+h3 {
+    margin-top: 0;
+    color: grey;
+    font-size: 1.2em;
+}
+
+/* Style for the lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for list items */
+ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
